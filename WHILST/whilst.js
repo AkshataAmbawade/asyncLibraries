@@ -3,16 +3,32 @@ const async = require('async');
 // Repeatedly call iteratee, while test returns true. Calls callback when stopped, or an error occurs.
 
 
-var count = 0;
+// var count = 0;
+// async.whilst(
+//     function test(cb) { cb(null, count < 10); },
+//     function iter(callback) {
+//         count++;
+//         setTimeout(function () {
+//             callback(null, count);
+//         }, 1000);
+//     },
+//     function (err, n) {
+//         console.log(n);
+//     }
+// );
+
+let count=0;
 async.whilst(
-    function test(cb) { cb(null, count < 10); },
-    function iter(callback) {
+    function tesT(callback){
+        callback(null,count<10)
+    },
+    function iter(callback){
         count++;
-        setTimeout(function () {
-            callback(null, count);
+        setTimeout(() => {
+            callback(null,count)
         }, 1000);
     },
-    function (err, n) {
+    function(err,n){
         console.log(n);
     }
-);
+)      

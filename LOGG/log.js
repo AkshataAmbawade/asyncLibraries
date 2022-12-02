@@ -15,3 +15,18 @@ const async = require('async');
 // }
 // async.log(greetings, "Akshata")
 
+// const work=(name,callback)=>{
+//     setTimeout(() => {
+//         callback(null,'this work to do '+ name)
+//     }, 5000);
+// }
+// async.log(work,"Akshata")
+
+
+
+const usersname=(name,callback)=>{
+    setTimeout(() => {
+        callback(null,'User name is: '+ name)
+    }, 1000);
+}
+async.log(usersname,"Akshata")

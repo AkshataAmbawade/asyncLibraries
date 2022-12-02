@@ -9,21 +9,21 @@ const missingList= ['dir1/file1.txt', 'dir4/file2.txt'];
 //     fs.unlink(file, callback);
 // }
 
-// // async.each(directoryList, deleteFile, function(err) {
-// //     if( err ) {
-// //         console.log(err);
-// //     } else {
-// //         console.log('All files have been deleted successfully');
-// //     }
-// // });
+// async.each(directoryList, deleteFile, function(err) {
+//     if( err ) {
+//         console.log(err);
+//     } else {
+//         console.log('All files have been deleted successfully');
+//     }
+// });
 
-// // Error Handling
-// // async.each(missingList, deleteFile, function(err){
-// //     console.log(err);
-// //     // [ Error: ENOENT: no such file or directory ]
-// //     // since dir4/file2.txt does not exist
-// //     // dir1/file1.txt could have been deleted
-// // });
+// Error Handling
+// async.each(missingList, deleteFile, function(err){
+//     console.log(err);
+//     // [ Error: ENOENT: no such file or directory ]
+//     // since dir4/file2.txt does not exist
+//     // dir1/file1.txt could have been deleted
+// });
 
 // async.each(directoryList, deleteFile)
 // .then( () => {
